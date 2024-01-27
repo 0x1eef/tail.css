@@ -10,6 +10,13 @@ along with a minimized copy
 There are compressed copies of those files included in
 [dist/](dist/) - they weigh in at around 6KB.
 
+## Why ?
+
+I found it to be near impossible to use tailwind without a nodejs
+environment. But not every project I work on has nodejs available.
+That's why I decided to build a vanilla CSS file I could include
+in any project - with or without nodejs.
+
 ## Build
 
     $ bin/build
