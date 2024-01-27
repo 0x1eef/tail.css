@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if ! which sass > /dev/null 2>&1; then
+   echo "No sass compiler found in \$PATH"
+   exit 1
+else
+    options="--no-cache --scss -r./shim.rb"
+    mkdir -p dist/
+    sass ${options} src/tail.scss dist/tail.css
+    sass ${options} --style compressed src/tail.scss dist/tail.min.css
+fi
