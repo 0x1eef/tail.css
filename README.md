@@ -8,7 +8,7 @@ is provided in case you don't have access to the Ruby sass compiler,
 along with a minimized copy
 ([dist/tail.min.css](dist/tail.min.css)).
 There are compressed copies of those files included in
-[dist/](dist/), and they weigh in at around 6KB.
+[dist/](dist/) - they weigh in at around 6KB.
 
 ## Build
 
