@@ -16,4 +16,5 @@ along with a minimized copy
 
 Copyright belongs to the
 [tailwind project](https://tailwindcss.com/).
+<br>
 See [tailwindcss/LICENSE](https://github.com/tailwindlabs/tailwindcss/blob/master/LICENSE).
