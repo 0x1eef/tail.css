@@ -1,5 +1,5 @@
 #!/bin/sh
-
+set -e
 if ! which sass > /dev/null 2>&1; then
    echo "No sass compiler found in \$PATH"
    exit 1
