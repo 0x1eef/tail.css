@@ -1,0 +1,24 @@
+#!/usr/bin/env ruby
+$stdout.sync = true
+
+def noecho
+  system "stty -echo"
+  str = yield
+  system "stty echo"
+  str
+end
+
+loop do
+  str = noecho { $stdin.gets }
+  str = str.gsub(/[^A-Za-z0-9_\s\/\-,;:"']/, '')
+  sep = "\t"
+  class_name, class_body = str.split(sep, 2)
+  if class_name && class_body
+    class_name.gsub!(%r|([/.])|) { "\\#{_1}" }
+    print ".#{class_name.chomp}",
+          " { \n",
+          " " * 2,
+          class_body.chomp,
+          "\n}\n"
+  end
+end
