@@ -10,7 +10,7 @@ end
 
 def read
   noecho { $stdin.gets }
-  .gsub(/[^A-Za-z0-9_\s\/\-,;:*"'.]/, '')
+  .gsub(/[^A-Za-z0-9_\s\/\-,;:*"'.()#]/, '')
 end
 
 open = false
