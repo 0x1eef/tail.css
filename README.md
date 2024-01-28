@@ -19,6 +19,10 @@ in any project - with or without nodejs.
 
 ## Build
 
+Custom builds provide a way to customize what features are
+included in a build. The `@import` directives in [src/](src/)
+decide what features to include:
+
     $ bin/build
 
 ## License
