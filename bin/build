@@ -6,7 +6,7 @@ if ! which sass > /dev/null 2>&1; then
 else
     options="--no-cache --scss -r./shim.rb --sourcemap=none"
     mkdir -p dist/
-    sass ${options} src/tail.scss dist/tail.css
+    sass ${options} --style expanded src/tail.scss dist/tail.css
     sass ${options} --style compressed src/tail.scss dist/tail.min.css
     gzip -9 -k -f dist/tail.css
     gzip -9 -k -f dist/tail.min.css
