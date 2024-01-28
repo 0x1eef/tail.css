@@ -3685,3 +3685,11 @@
   /* 128px */
   line-height: 1;
 }
+
+.italic {
+  font-style: italic;
+}
+
+.not-italic {
+  font-style: normal;
+}
