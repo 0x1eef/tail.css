@@ -2,23 +2,30 @@
 $stdout.sync = true
 
 def noecho
-  system "stty -echo"
-  str = yield
-  system "stty echo"
-  str
+  system("stty -echo")
+  yield
+ensure
+  system("stty echo")
 end
 
+def read
+  noecho { $stdin.gets }
+  .gsub(/[^A-Za-z0-9_\s\/\-,;:*"']/, '')
+end
+
+reads = 0
 loop do
-  str = noecho { $stdin.gets }
-  str = str.gsub(/[^A-Za-z0-9_\s\/\-,;:"']/, '')
-  sep = "\t"
-  class_name, class_body = str.split(sep, 2)
-  if class_name && class_body
+  tab, buf = "\t", read
+  if IO.select([$stdin], [], [], 0.1).nil?
+    reads = 0
+    print buf.chomp, "}", "\n"
+  elsif buf.include?(tab)
+    print "}\n" if reads > 0
+    class_name, class_body = buf.split(tab, 2)
     class_name.gsub!(%r|([/.])|) { "\\#{_1}" }
-    print ".#{class_name.chomp}",
-          " { \n",
-          " " * 2,
-          class_body.chomp,
-          "\n}\n"
+    print ".#{class_name} {", "\n", " " * 2, class_body.chomp, "\n"
+    reads += 1
+  else
+    print " " * 2, buf
   end
 end
