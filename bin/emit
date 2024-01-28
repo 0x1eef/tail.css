@@ -13,19 +13,19 @@ def read
   .gsub(/[^A-Za-z0-9_\s\/\-,;:*"'.]/, '')
 end
 
-reads = 0
+open = false
 loop do
   tab, buf = "\t", read
-  if IO.select([$stdin], [], [], 0.1).nil?
-    reads = 0
-    print buf.chomp, "}", "\n"
-  elsif buf.include?(tab)
-    print "}\n" if reads > 0
+  if buf.include?(tab)
+    print "\n}\n" if open
     class_name, class_body = buf.split(tab, 2)
     class_name.gsub!(%r|([/.])|) { "\\#{_1}" }
-    print ".#{class_name} {", "\n", " " * 2, class_body.chomp, "\n"
-    reads += 1
-  else
-    print " " * 2, buf
+    print ".#{class_name} {", "\n", " " * 2, class_body.chomp
+    open = true
+  elsif buf.include?(":")
+    print "\n", " " * 2, buf.chomp
+  elsif open
+    open = false
+    print "\n}\n"
   end
 end
