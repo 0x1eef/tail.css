@@ -1,6 +1,6 @@
 ## About
 
-tail.css provides a small subset of
+tail.css provides _a small subset_ of
 [tailwind](https://tailwindcss.com/)
 that has been extracted from a hobby project. A prebuilt copy of
 [dist/tail.css](dist/tail.css)
