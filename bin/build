@@ -1,13 +1,13 @@
 #!/bin/sh
-set -e
-if ! which sass > /dev/null 2>&1; then
-   echo "No sass compiler found in \$PATH"
+compiler=$(which sass)
+if [ ${?} -ne 0 ]; then
+   echo "The sass compiler was not found on \$PATH."
    exit 1
 else
-    options="--no-cache --scss -r./shim.rb --sourcemap=none"
+    set -e
     mkdir -p dist/
-    sass ${options} --style expanded src/tail.scss dist/tail.css
-    sass ${options} --style compressed src/tail.scss dist/tail.min.css
+    ${compiler} --embed-source-map --style expanded src/tail.scss dist/tail.css
+    ${compiler} --no-source-map --style compressed src/tail.scss dist/tail.min.css
     gzip -9 -k -f dist/tail.css
     gzip -9 -k -f dist/tail.min.css
 fi
