@@ -9,7 +9,7 @@ along with a minimized copy
 ([dist/tail.min.css](dist/tail.min.css)).
 There are gzip-compressed copies of those files included in
 [dist/](dist/)
-- `tail.css.min.gz`` weighs in at around 8.5KB.
+... `tail.css.min.gz`` weighs in at around 8.5KB.
 
 ## Why ?
 
