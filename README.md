@@ -40,3 +40,7 @@ Copyright of src/normalize/ belongs to the
 [normalize.css project](https://raw.githubusercontent.com/necolas/normalize.css).
 <br>
 See [normalize/LICENSE.md](https://github.com/necolas/normalize.css/blob/master/LICENSE.md).
+
+The remaining copyright is covered by the [0BSD License](https://choosealicense.com/licenses/0bsd/).
+<br>
+See [./LICENSE](./LICENSE).
