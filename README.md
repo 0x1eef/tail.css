@@ -3,10 +3,9 @@
 tail.css provides _a small subset_ of
 [tailwind](https://tailwindcss.com/)
 that was originally extracted from a hobby project.
-The CSS file [dist/tail.css](dist/tail.css)
-is provided in case you don't have access to
-the nodejs sass compiler
-- alongside [a minimized copy](dist/tail.min.css).
+The CSS files [dist/tail.css](dist/tail.css)
+and [dist/tail.min.css](dist/tail.min.css) are provided
+in case you don't have access to the nodejs sass compiler.
 
 ## Rationale
 
