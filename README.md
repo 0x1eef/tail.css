@@ -2,7 +2,7 @@
 
 tail.css provides _a small subset_ of
 [tailwind](https://tailwindcss.com/)
-that was originally extracted from a hobby project.
+that can be used without a nodejs environment.
 The CSS files [dist/tail.css](dist/tail.css)
 and [dist/tail.min.css](dist/tail.min.css) are provided
 in case you don't have access to the nodejs sass compiler.
@@ -18,7 +18,7 @@ sprinkle small amounts of CSS on top.
 
 ## Build
 
-Custom builds can customize what features are included in a build.
+Custom builds can customize what features are included in a build. <br>
 The `@import` directives in [src/](src/) decide what features to
 include:
 
