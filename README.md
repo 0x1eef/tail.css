@@ -19,6 +19,11 @@ include:
     $ npm install -g sass
     $ bin/build
 
+## Sources
+
+* [GitHub](https://github.com/0x1eef/tail.css)
+* [brew.bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/tail.css)
+
 ## License
 
 Copyright of src/tail/ belongs to the
