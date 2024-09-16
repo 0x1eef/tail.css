@@ -1,20 +1,14 @@
 ## About
 
-tail.css provides _a small subset_ of
+tail.css provides **a small subset** of
 [tailwind](https://tailwindcss.com/)
-that can be used without a nodejs environment.
-The CSS files [dist/tail.css](dist/tail.css)
-and [dist/tail.min.css](dist/tail.min.css) are provided
-in case you don't have access to the nodejs sass compiler.
-
-## Rationale
-
-The motivation behind this project is to be able to use tailwind
-without a nodejs environment. tail.css can be used within a vanilla
-CSS environment, or within an environment that uses
-[sass](https://sass-lang.com).
-Most of the time I use tail.css within a sass environment, and
-sprinkle small amounts of CSS on top.
+as pure CSS files that can be used with
+or without nodejs. The motivation behind
+tail.css is to be able to use tailwind in
+simple environments that don't have access
+to nodejs or other runtimes. The [dist/](dist/)
+directory includes pure CSS files that can be
+easily dropped into any project.
 
 ## Build
 
