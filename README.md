@@ -22,6 +22,7 @@ include:
 ## Sources
 
 * [GitHub](https://github.com/0x1eef/tail.css)
+* [GitLab](https://gitlab.com/0x1eef/tail.css)
 * [brew.bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/tail.css)
 
 ## License
