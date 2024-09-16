@@ -33,4 +33,4 @@ See [normalize/LICENSE.md](https://github.com/necolas/normalize.css/blob/master/
 
 The remaining copyright is covered by the [0BSD License](https://choosealicense.com/licenses/0bsd/).
 <br>
-See [./LICENSE](./LICENSE)
+See [LICENSE](./LICENSE)
