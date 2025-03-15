@@ -12,17 +12,17 @@ easily dropped into any project.
 
 ## Build
 
-Custom builds can customize what features are included in a build. <br>
-The `@import` directives in [src/](src/) decide what features to
-include:
+Custom builds can customize what features are
+included in a build. <br> The `@use` directives
+in [src/](src/) decide what features to include:
 
     $ npm install -g sass
     $ bin/build
 
 ## Sources
 
-* [GitHub](https://github.com/0x1eef/tail.css)
-* [GitLab](https://gitlab.com/0x1eef/tail.css)
+* [github.com/@0x1eef](https://github.com/0x1eef/tail.css)
+* [gitlab.com/@0x1eef](https://gitlab.com/0x1eef/tail.css)
 * [brew.bsd.cafe/@0x1eef](https://brew.bsd.cafe/0x1eef/tail.css)
 
 ## License
