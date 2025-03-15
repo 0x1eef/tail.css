@@ -1,2 +1,3 @@
-@import "height/index";
-@import "width/index";
+@use "max_height";
+@use "height";
+@use "width";
