@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+# frozen_string_literal: true
+
 $stdout.sync = true
 
 def noecho
@@ -10,7 +12,7 @@ end
 
 def read
   noecho { $stdin.gets }
-  .gsub(/[^A-Za-z0-9_\s\/\-,;:*"'.()#%]/, '')
+  .gsub(/[^A-Za-z0-9_\s\/\-,;:*"'.()#%]/, "")
 end
 
 open = false
